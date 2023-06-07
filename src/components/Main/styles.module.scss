@@ -1,0 +1,33 @@
+.main {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+}
+.main_container {
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+.main_column {
+  display: flex;
+  flex-direction: column;
+}
+.main__title {
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    color: #2a2d46;
+  }
+}
+.main__text {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2a2d46;
+}

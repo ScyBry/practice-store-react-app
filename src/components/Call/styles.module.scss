@@ -1,0 +1,14 @@
+.CallRoot {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #2a2d46;
+  }
+}

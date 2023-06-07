@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo, NavCategories } from '../index';
+import { Logo, NavCategories, Call } from '../index';
 
 import styles from './Styles.module.scss';
 
@@ -9,6 +9,7 @@ export default function index() {
       <div className={styles.container}>
         <Logo></Logo>
         <NavCategories></NavCategories>
+        <Call></Call>
       </div>
     </nav>
   );
