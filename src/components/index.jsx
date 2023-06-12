@@ -11,3 +11,4 @@ export { default as Skeleton } from './Skeleton';
 export { default as Footer } from './Footer';
 export { default as FullCard } from './FullCard/FullCard';
 export { default as Category } from './Category/Category';
+export { default as ControlledOpenSpeedDial } from './ControlledOpenSpeedDial';

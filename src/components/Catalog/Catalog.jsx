@@ -6,21 +6,24 @@ import { Pagination } from '@mui/material';
 import styles from './styles.module.scss';
 import { Card, Skeleton, Category } from '..';
 import { fetchCards } from '../../redux/slices/card';
+import { setCurrentPage } from '../../redux/slices/filterSlice';
 
 export default function Catalog() {
   const dispatch = useDispatch();
   const { cards } = useSelector((state) => state.cards);
-  const { categoryId, currentPage } = useSelector((state) => state.filter);
+  const { categoryId, currentPage, limit } = useSelector((state) => state.filter);
 
   const isCardLoading = cards.status === 'loading';
 
   const category = categoryId > 0 ? `category=${categoryId}` : '';
-  const page = currentPage > 1 ? `page=${currentPage}&limit=4` : 'page=${}';
-  useEffect(() => {
-    dispatch(fetchCards(category, page));
-  }, [categoryId, currentPage]);
 
-  console.log(cards.id);
+  useEffect(() => {
+    dispatch(fetchCards(category, currentPage, limit));
+  }, [categoryId, currentPage, limit]);
+
+  const handleChange = (event, value) => {
+    dispatch(setCurrentPage(value));
+  };
 
   return (
     <section className={styles.catalogRoot}>
@@ -47,7 +50,13 @@ export default function Catalog() {
             ),
           )}
         </div>
-        <Pagination sx={{ marginTop: '30px' }} count={10} color="primary" />
+        <Pagination
+          sx={{ marginTop: '30px' }}
+          count={10}
+          color="primary"
+          page={currentPage}
+          onChange={handleChange}
+        />
       </div>
     </section>
   );

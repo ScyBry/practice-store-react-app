@@ -9,8 +9,6 @@ export default function Category() {
 
   const { categoryId } = useSelector((state) => state.filter);
 
-  console.log(categoryId);
-
   return (
     <ul className={styles.root}>
       {categories.map((value, index) => (
