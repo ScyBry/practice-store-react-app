@@ -1,28 +1,35 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { Pagination } from '@mui/material';
 
 import styles from './styles.module.scss';
-import { Card, Skeleton } from '..';
+import { Card, Skeleton, Category } from '..';
 import { fetchCards } from '../../redux/slices/card';
 
 export default function Catalog() {
   const dispatch = useDispatch();
   const { cards } = useSelector((state) => state.cards);
+  const { categoryId, currentPage } = useSelector((state) => state.filter);
 
   const isCardLoading = cards.status === 'loading';
 
+  const category = categoryId > 0 ? `category=${categoryId}` : '';
+  const page = currentPage > 1 ? `page=${currentPage}&limit=4` : 'page=${}';
   useEffect(() => {
-    dispatch(fetchCards());
-  }, []);
+    dispatch(fetchCards(category, page));
+  }, [categoryId, currentPage]);
 
-  console.log(cards);
+  console.log(cards.id);
 
   return (
     <section className={styles.catalogRoot}>
       <div className={styles.catalogContainer}>
-        <div className={styles.catalog__title}>
-          <h2>Каталог товаров</h2>
+        <div className={styles.catalogFilter_container}>
+          <div className={styles.catalog__title}>
+            <h2>Каталог товаров</h2>
+          </div>
+          <Category></Category>
         </div>
         <div className={styles.cardContainer}>
           {(isCardLoading ? [...Array(5)] : cards.items).map((item, index) =>
@@ -40,6 +47,7 @@ export default function Catalog() {
             ),
           )}
         </div>
+        <Pagination sx={{ marginTop: '30px' }} count={10} color="primary" />
       </div>
     </section>
   );

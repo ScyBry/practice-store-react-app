@@ -1,6 +1,6 @@
 export { default as Navbar } from '../components/Navbar';
 export { default as Logo } from '../components/Logo';
-export { default as NavCategories } from '../components/NavCategories';
+export { default as WhiteLogo } from './WhiteLogo';
 export { default as Call } from '../components/Call';
 export { default as CallButton } from '../components/CallButton';
 export { default as Main } from '../components/Main';
@@ -9,3 +9,5 @@ export { default as Card } from './Card/Card';
 export { default as Catalog } from './Catalog/Catalog';
 export { default as Skeleton } from './Skeleton';
 export { default as Footer } from './Footer';
+export { default as FullCard } from './FullCard/FullCard';
+export { default as Category } from './Category/Category';

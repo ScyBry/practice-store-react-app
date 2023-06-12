@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.iconContainer {
+  img {
+    width: 34px;
+    height: 34px;
+  }
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  b {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #ffffff;
+  }
+}

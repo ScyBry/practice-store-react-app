@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Home, Card } from './pages';
 import { Navbar, Footer } from './components';
+import './App.css';
 
 function App() {
   return (

@@ -1,0 +1,12 @@
+.fullCardRoot {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .fullCard__column {
+    display: flex;
+    .columnCharacteristicsContainer {
+      display: flex;
+    }
+  }
+}

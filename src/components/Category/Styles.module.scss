@@ -3,7 +3,7 @@
   gap: 30px;
   text-decoration: none;
 }
-span {
+.category {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -15,4 +15,7 @@ span {
   &:hover {
     color: #0c76d8;
   }
+}
+.activeCategory {
+  color: #0c76d8 !important;
 }

@@ -1,1 +1,1 @@
-export const NavCategories = ['Телефоны', 'Планшеты', 'Дроны', 'Игрушки'];
+export const categories = ['Все', 'Телефоны', 'Планшеты', 'Дроны'];

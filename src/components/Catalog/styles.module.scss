@@ -4,6 +4,11 @@
   .catalogContainer {
     max-width: 1170px;
     margin: 0 auto;
+    .catalogFilter_container {
+      display: flex;
+      align-items: center;
+      gap: 5%;
+    }
     .catalog__title {
       font-weight: 900;
       font-size: 25px;

@@ -1,11 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from '../../axios';
 
-export const fetchCards = createAsyncThunk('cars/fetchCards', async () => {
-  const { data } = await axios.get('/items');
-
-  return data;
-});
+export const fetchCards = createAsyncThunk(
+  'cards/fetchCardsByCategory',
+  async (categoryId, currentPage) => {
+    console.log('Текущая страница ' + currentPage);
+    console.log('Категория ' + currentPage);
+    const { data } = await axios.get(`/items?${currentPage}&${categoryId}`);
+    return data;
+  },
+);
 
 const initialState = {
   cards: {
