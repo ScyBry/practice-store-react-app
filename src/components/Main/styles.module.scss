@@ -5,7 +5,7 @@
 .main_container {
   max-width: 1170px;
   margin: 0 auto;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -13,6 +13,7 @@
 .main_column {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 .main__title {
   h1 {
@@ -24,7 +25,6 @@
   }
 }
 .main__text {
-  margin-top: 40px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

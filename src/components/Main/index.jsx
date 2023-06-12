@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './styles.module.scss';
+import { CatalogButton, SwiperSlider } from '../../components';
 
 export default function index() {
   return (
@@ -19,6 +20,7 @@ export default function index() {
               <br></br> новинками digital-рынка.
             </p>
           </div>
+          <CatalogButton></CatalogButton>
         </div>
       </div>
     </div>
