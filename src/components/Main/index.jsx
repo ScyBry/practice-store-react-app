@@ -1,7 +1,8 @@
 import React from 'react';
 
+import MainScreenImg from '../../Assets/mainScreen.png';
 import styles from './styles.module.scss';
-import { CatalogButton, SwiperSlider } from '../../components';
+import { CatalogButton } from '../../components';
 
 export default function index() {
   return (
@@ -22,6 +23,7 @@ export default function index() {
           </div>
           <CatalogButton></CatalogButton>
         </div>
+        <img style={{ position: 'absolute', right: '0px' }} src={MainScreenImg} alt="" />
       </div>
     </div>
   );

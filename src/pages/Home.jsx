@@ -1,12 +1,11 @@
 import React from 'react';
-
-import { Main, SwiperSlider } from '../components';
+import { Main, Catalog } from '../components';
 
 export default function Home() {
   return (
     <div>
       <Main></Main>
-      {/* <SwiperSlider></SwiperSlider> */}
+      <Catalog></Catalog>
     </div>
   );
 }
