@@ -42,14 +42,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from '../../axios';
 
-export const fetchCards = (categoryId, currentPage, limit) => {
+export const fetchCards = (categoryId, currentPage, limit, sortBy, order) => {
   return async (dispatch) => {
     try {
       dispatch(fetchCardsPending());
 
+      console.log('Сортировка по: ' + sortBy + 'Порядок: ' + order);
+
       console.log('Текущая страница ' + currentPage);
       console.log('Категория ' + categoryId);
-      const { data } = await axios.get(`/items?page=${currentPage}&limit=${limit}&${categoryId}`);
+      const { data } = await axios.get(
+        `/items?page=${currentPage}&limit=${limit}&${categoryId}&sortBy=${sortBy}&order=${order}`,
+      );
 
       dispatch(fetchCardsFulfilled(data));
     } catch (error) {

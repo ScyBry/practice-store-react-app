@@ -1,19 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Rating } from '@mui/material';
 
 import styles from './style.module.scss';
 import ButtonIcon from './button-icon.png';
 
 export default function Card({
-  index,
+  id,
   name,
   image,
   characteristics_name,
   characteristics_value,
   price,
+  rating,
 }) {
   return (
-    <NavLink to={`/card/${index}`}>
+    <NavLink to={`/card/${id}`}>
       <div className={styles.cardRoot}>
         <div className={styles.card__title}>{name}</div>
         <div className={styles.card__image}>
@@ -31,6 +33,7 @@ export default function Card({
             ))}
           </ul>
         </div>
+        <Rating name="read-only" value={rating} readOnly />
         <div className={styles.cardBottom}>
           <span className={styles.cardBottom__price}>{price} грн</span>
           <button>

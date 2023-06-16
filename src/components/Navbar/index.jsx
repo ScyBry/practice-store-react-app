@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo, Category, Call } from '../index';
+import { Logo, Category, Call, CartIcon } from '../index';
 
 import styles from './Styles.module.scss';
 
@@ -8,8 +8,8 @@ export default function index() {
     <nav className={styles.root}>
       <div className={styles.container}>
         <Logo></Logo>
-        <Category></Category>
         <Call></Call>
+        <CartIcon></CartIcon>
       </div>
     </nav>
   );

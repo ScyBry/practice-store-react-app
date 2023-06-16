@@ -1,0 +1,28 @@
+.cartContainer {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cart {
+  &__titleContainer {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+
+      font-size: 24px;
+      line-height: 21px;
+      color: #2a2d46;
+    }
+  }
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.items__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

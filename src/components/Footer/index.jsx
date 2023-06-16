@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './styles.module.scss';
-import { WhiteLogo } from '..';
+import { WhiteLogo, Category } from '..';
 
 export default function index() {
   return (

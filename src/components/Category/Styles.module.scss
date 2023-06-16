@@ -2,6 +2,13 @@
   display: flex;
   gap: 30px;
   text-decoration: none;
+  li {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    &:hover {
+      color: #0c76d8;
+    }
+  }
 }
 .category {
   font-family: 'Montserrat';
@@ -11,10 +18,6 @@
   line-height: 15px;
   text-align: center;
   color: #2a2d46;
-  transition: 0.3s ease-in;
-  &:hover {
-    color: #0c76d8;
-  }
 }
 .activeCategory {
   color: #0c76d8 !important;

@@ -1,0 +1,36 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #0c76d8;
+  border-radius: 15px;
+  padding: 10px;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+.item__img {
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+.item__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2a2d46;
+}
+.item__price {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 18px;
+  color: #0c76d8;
+}

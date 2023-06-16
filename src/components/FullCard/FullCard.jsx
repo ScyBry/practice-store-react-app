@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/slices/cartSlice';
 import axios from '../../axios';
 
 import styles from './style.module.scss';
-import { useParams } from 'react-router-dom';
+import { Button, Rating } from '@mui/material';
 
 export default function FullCard() {
+  const dispatch = useDispatch();
+
   const { id } = useParams();
-  console.log(id);
+  console.log("s'kgfd" + id);
 
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -24,27 +29,46 @@ export default function FullCard() {
       });
   }, []);
 
+  const onClickAdd = () => {
+    const item = {
+      id,
+      name: data.name,
+      price: data.price,
+      image: data.image,
+    };
+    dispatch(addItem(item));
+  };
+
   if (isLoading) {
     return <>Загружается</>;
   }
 
   return (
-    <div className={styles.fullCardRoot}>
-      <div className={styles.fullCard__column}>
-        <img src={data.image} alt="" />
-      </div>
-      <div className={styles.fullCard__column}>
-        <div classname={styles.columnCharacteristicsContainer}>
-          <ul>
-            {data.characteristics_name.map((name, index) => (
-              <li key={index}>{name}</li>
-            ))}
-          </ul>
-          <ul>
-            {data.characteristics_value.map((value, index) => (
-              <li>{value}</li>
-            ))}
-          </ul>
+    <div className={styles.productDetails}>
+      <div className={styles.productDetails_container}>
+        <div className={styles.productDetails_container__column}>
+          <img src={data.image} />
+        </div>
+        <div className={styles.productDetails_container__column}>
+          <div className={styles.column__cardName}>
+            <h3>{data.name}</h3>
+          </div>
+          <div className={styles.column__characteristics}>
+            <ul className={styles.characteristics__name}>
+              {data.characteristics_name.map((value, index) => (
+                <li key={index}>{value}:</li>
+              ))}
+            </ul>
+            <ul className={styles.characteristics__value}>
+              {data.characteristics_value.map((value, index) => (
+                <li key={index}>{value}</li>
+              ))}
+            </ul>
+          </div>
+          <Rating value={data.rating}></Rating>
+          <Button onClick={onClickAdd} variant="contained">
+            ДОБАВИТЬ В КОРЗИНУ
+          </Button>
         </div>
       </div>
     </div>

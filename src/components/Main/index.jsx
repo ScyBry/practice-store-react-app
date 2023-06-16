@@ -23,7 +23,7 @@ export default function index() {
           </div>
           <CatalogButton></CatalogButton>
         </div>
-        <img style={{ position: 'absolute', right: '0px' }} src={MainScreenImg} alt="" />
+        <img style={{ position: 'absolute', right: '0px', zIndex: 1 }} src={MainScreenImg} alt="" />
       </div>
     </div>
   );

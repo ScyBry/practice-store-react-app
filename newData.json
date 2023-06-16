@@ -7,7 +7,7 @@
     "characteristics_value": ["Металл, Стекло", "IP67", "Черный", "IPS", "4.7"],
     "price": 22000,
     "category": 1,
-    "rating": 6
+    "rating": 4.1
   },
   {
     "id": "1",
@@ -17,7 +17,7 @@
     "characteristics_value": ["Металл, Стекло", "IP68", "Серый", "AMOLED", "6.2"],
     "price": 30000,
     "category": 1,
-    "rating": 8
+    "rating": 3.5
   },
   {
     "id": "2",
@@ -27,7 +27,7 @@
     "characteristics_value": ["Алюминий", "IP68", "Серебристый", "Liquid Retina", "11"],
     "price": 50000,
     "category": 2,
-    "rating": 9
+    "rating": 3
   },
   {
     "id": "3",
@@ -37,7 +37,7 @@
     "characteristics_value": ["Пластик", "IP43", "Белый", "4K", "34 мин"],
     "price": 35000,
     "category": 3,
-    "rating": 7
+    "rating": 4.7
   },
   {
     "id": "4",
@@ -53,7 +53,7 @@
     "characteristics_value": ["Алюминий", "macOS", "Серый", "Intel Core i7", "15.6"],
     "price": 100000,
     "category": 4,
-    "rating": 10
+    "rating": 5
   },
   {
     "id": "5",
@@ -63,7 +63,7 @@
     "characteristics_value": ["Пластик, Стекло", "IP68", "Черный", "OLED", "6.0"],
     "price": 28000,
     "category": 1,
-    "rating": 7
+    "rating": 3.4
   },
   {
     "id": "6",
@@ -73,7 +73,7 @@
     "characteristics_value": ["Алюминий", "IP68", "Синий", "Super AMOLED", "11"],
     "price": 45000,
     "category": 2,
-    "rating": 8
+    "rating": 3.9
   },
   {
     "id": "7",
@@ -83,7 +83,7 @@
     "characteristics_value": ["Магниевый сплав", "IP43", "Белый", "4K", "30 мин"],
     "price": 70000,
     "category": 3,
-    "rating": 9
+    "rating": 3
   },
   {
     "id": "8",
@@ -99,7 +99,7 @@
     "characteristics_value": ["Пластик", "Windows 10", "Серебристый", "Intel Core i5", "14"],
     "price": 55000,
     "category": 4,
-    "rating": 8
+    "rating": 4.6
   },
   {
     "id": "9",
@@ -109,7 +109,7 @@
     "characteristics_value": ["Металл, Стекло", "IP68", "Серый", "Fluid AMOLED", "6.55"],
     "price": 32000,
     "category": 1,
-    "rating": 9
+    "rating": 4.3
   },
   {
     "id": "10",
@@ -119,6 +119,6 @@
     "characteristics_value": ["Алюминий", "IP68", "Зеленый", "Liquid Retina", "10.9"],
     "price": 40000,
     "category": 2,
-    "rating": 7
+    "rating": 4.8
   }
 ]

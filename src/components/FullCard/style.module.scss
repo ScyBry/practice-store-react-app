@@ -1,12 +1,65 @@
-.fullCardRoot {
+.productDetails {
   max-width: 1170px;
   margin: 0 auto;
+  height: 92vh;
   display: flex;
-  justify-content: space-between;
-  .fullCard__column {
+  align-items: center;
+  justify-content: center;
+  .productDetails_container {
     display: flex;
-    .columnCharacteristicsContainer {
+    justify-content: center;
+
+    gap: 40px;
+    align-items: center;
+    &__column {
       display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        padding: 20px;
+        border: 1px solid #2c3ba0;
+        border-radius: 15px;
+        height: 100%;
+      }
     }
+  }
+}
+.column {
+  &__cardName {
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 17px;
+      line-height: 21px;
+      color: #2a2d46;
+    }
+  }
+  &__characteristics {
+    display: flex;
+    gap: 30px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+.characteristics {
+  &__name {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2c3ba0;
+  }
+  &__value {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

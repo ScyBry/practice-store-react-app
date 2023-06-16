@@ -1,8 +1,9 @@
 import React from 'react';
-import { categories } from '../../utils/constants';
+import { CATEGORIES } from '../../utils/constants';
 import styles from './Styles.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCategoryId } from '../../redux/slices/filterSlice';
+import { Sort } from '../../components';
 
 export default function Category() {
   const dispatch = useDispatch();
@@ -10,15 +11,18 @@ export default function Category() {
   const { categoryId } = useSelector((state) => state.filter);
 
   return (
-    <ul className={styles.root}>
-      {categories.map((value, index) => (
-        <li
-          onClick={() => dispatch(setCategoryId(index))}
-          className={styles.category && categoryId === index ? styles.activeCategory : ''}
-          key={index}>
-          {value}
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className={styles.root}>
+        {CATEGORIES.map((value, index) => (
+          <li
+            onClick={() => dispatch(setCategoryId(index))}
+            className={styles.category && categoryId === index ? styles.activeCategory : ''}
+            key={index}>
+            {value}
+          </li>
+        ))}
+      </ul>
+      <Sort></Sort>
+    </>
   );
 }

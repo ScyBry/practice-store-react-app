@@ -4,22 +4,26 @@ import { useEffect } from 'react';
 import { Pagination } from '@mui/material';
 
 import styles from './styles.module.scss';
-import { Card, Skeleton, Category } from '..';
+import { Card, Skeleton, Category, ItemsShowInput } from '..';
 import { fetchCards } from '../../redux/slices/card';
 import { setCurrentPage } from '../../redux/slices/filterSlice';
 
 export default function Catalog() {
   const dispatch = useDispatch();
   const { cards } = useSelector((state) => state.cards);
-  const { categoryId, currentPage, limit } = useSelector((state) => state.filter);
+  const { categoryId, currentPage, limit, sort } = useSelector((state) => state.filter);
 
   const isCardLoading = cards.status === 'loading';
 
   const category = categoryId > 0 ? `category=${categoryId}` : '';
+  const sortBy = sort.sortProperty.replace('-', '');
+  const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
+
+  console.log('Порядок' + order + ' ' + sortBy);
 
   useEffect(() => {
-    dispatch(fetchCards(category, currentPage, limit));
-  }, [categoryId, currentPage, limit]);
+    dispatch(fetchCards(category, currentPage, limit, sortBy, order));
+  }, [categoryId, currentPage, limit, sort]);
 
   const handleChange = (event, value) => {
     dispatch(setCurrentPage(value));
@@ -33,20 +37,22 @@ export default function Catalog() {
             <h2>Каталог товаров</h2>
           </div>
           <Category></Category>
+          <ItemsShowInput></ItemsShowInput>
         </div>
         <div className={styles.cardContainer}>
-          {(isCardLoading ? [...Array(5)] : cards.items).map((item, index) =>
+          {(isCardLoading ? [...Array(8)] : cards.items).map((item, index) =>
             isCardLoading ? (
               <Skeleton></Skeleton>
             ) : (
               <Card
                 key={index}
-                index={index}
+                id={item.id}
                 name={item.name}
                 image={item.image}
                 characteristics_name={item.characteristics_name}
                 characteristics_value={item.characteristics_value}
-                price={item.price}></Card>
+                price={item.price}
+                rating={item.rating}></Card>
             ),
           )}
         </div>
