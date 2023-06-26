@@ -1,7 +1,7 @@
-export { default as Navbar } from '../components/Navbar';
+export { default as Navbar } from '../components/Navbar/Navbar';
 export { default as Logo } from '../components/Logo';
 export { default as WhiteLogo } from './WhiteLogo';
-export { default as Call } from '../components/Call';
+export { default as Call } from '../components/Call/Call';
 export { default as CallButton } from '../components/CallButton';
 export { default as Main } from '../components/Main';
 export { default as CatalogButton } from '../components/CatalogButton';
@@ -18,3 +18,5 @@ export { default as CartIcon } from './CartIcon/CartIcon';
 export { default as Cart } from './Cart/Cart';
 export { default as CountInput } from './CountInput/CountInput';
 export { default as CartItem } from './CartItem/CartItem';
+export { default as Routes } from './Routes/Routes';
+export { default as Popup } from './Popup';

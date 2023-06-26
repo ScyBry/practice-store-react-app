@@ -1,12 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
-export default function index() {
+export default function index({ dispatch, setPopup, open }) {
   return (
-    <NavLink to="">
-      <button className={styles.root}>Заказать звонок</button>
-    </NavLink>
+    <button onClick={() => dispatch(setPopup(!open))} className={styles.root}>
+      Заказать звонок
+    </button>
   );
 }

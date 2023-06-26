@@ -1,11 +1,10 @@
 import React from 'react';
-import { Main, Catalog } from '../components';
+import { Main } from '../components';
 
 export default function Home() {
   return (
     <div>
       <Main></Main>
-      <Catalog></Catalog>
     </div>
   );
 }

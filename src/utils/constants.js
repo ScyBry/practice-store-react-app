@@ -8,3 +8,14 @@ export const SORT_OPTIONS = [
   { name: 'алфавиту (DESC)', sortProperty: 'name' },
   { name: 'алфавиту (ASC)', sortProperty: '-name' },
 ];
+
+export const ROUTES = [
+  {
+    name: 'Главная',
+    route: '/',
+  },
+  {
+    name: 'Каталог',
+    route: '/catalog',
+  },
+];

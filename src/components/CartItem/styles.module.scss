@@ -10,7 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    &:last-child {
+      gap: 40px;
+    }
   }
 }
 .item__img {

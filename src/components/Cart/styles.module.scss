@@ -1,11 +1,13 @@
 .cartContainer {
   max-width: 1170px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .cart {
   &__titleContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
@@ -25,4 +27,5 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 40px;
 }

@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 export default function () {
   return (
-    <NavLink to="/">
+    <NavLink to="/catalog">
       <button className={styles.root}>Смотреть каталог</button>
     </NavLink>
   );
