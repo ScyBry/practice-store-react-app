@@ -6,11 +6,12 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import styles from './styles.module.scss';
+import EmptyCart from './7612.jpg';
 import { Button } from '@mui/material';
 
 export default function Cart() {
   const dispatch = useDispatch();
-  const { items } = useSelector((state) => state.cart);
+  const { items, totalPrice } = useSelector((state) => state.cart);
 
   const onClickClear = () => {
     dispatch(clearItems());
@@ -31,20 +32,32 @@ export default function Cart() {
           Очистить корзину
         </Button>
       </div>
+
       <div className={styles.items__container}>
-        {items.map((item, index) => (
-          <CartItem
-            key={index}
-            id={item.id}
-            name={item.name}
-            count={item.count}
-            image={item.image}
-            price={item.price}
-            itemPrice={item.itemPrice}
-          />
-        ))}
+        {items.length === 0 ? (
+          <div className={styles.emptyCart}>
+            <img clas src={EmptyCart} alt="Empty Cart" />
+            <h1>Корзина пуста</h1>
+          </div>
+        ) : (
+          items.map((item, index) => (
+            <CartItem
+              key={index}
+              id={item.id}
+              name={item.name}
+              count={item.count}
+              image={item.image}
+              price={item.price}
+              itemPrice={item.itemPrice}
+            />
+          ))
+        )}
       </div>
-      <div className={styles.totalPrice__container}></div>
+
+      <div className={styles.totalPrice__container}>
+        <h2>К оплате:</h2>
+        <span>{totalPrice} грн.</span>
+      </div>
     </div>
   );
 }

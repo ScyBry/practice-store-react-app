@@ -29,3 +29,33 @@
   gap: 10px;
   margin-top: 40px;
 }
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  h1 {
+    color: var(--unnamed, #0c76d8);
+    text-align: center;
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+.totalPrice__container {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px;
+  color: var(--unnamed, #0c76d8);
+  font-size: 15px;
+  font-family: Montserrat;
+  font-weight: 900;
+  span {
+    color: #2a2d46;
+  }
+}

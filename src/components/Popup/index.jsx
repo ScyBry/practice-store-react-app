@@ -6,7 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function index({ dispatch, setPopup, open }) {
   return (
-    <div className={styles.popupBg}>
+    <div className={open ? styles.popupBg : styles.hide}>
       <div className={styles.popup__content}>
         <IconButton
           onClick={() => dispatch(setPopup(!open))}
