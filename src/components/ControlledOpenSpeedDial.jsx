@@ -4,16 +4,21 @@ import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import ShareIcon from '@mui/icons-material/Share';
 import CallIcon from '@mui/icons-material/Call';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 const actions = [
   { icon: <ShareIcon />, name: 'Поделиться' },
   { icon: <CallIcon />, name: 'Позвонить' },
+  { icon: <ArrowUpwardIcon />, name: 'Вверх' },
 ];
 
 export default function ControlledOpenSpeedDial() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    window.scrollTo(0, 0);
+    setOpen(false);
+  };
 
   return (
     <SpeedDial

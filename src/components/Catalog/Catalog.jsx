@@ -22,7 +22,15 @@ export default function Catalog() {
   console.log('Порядок' + order + ' ' + sortBy);
 
   useEffect(() => {
-    dispatch(fetchCards(category, currentPage, limit, sortBy, order));
+    dispatch(
+      fetchCards({
+        category,
+        currentPage,
+        limit,
+        sortBy,
+        order,
+      }),
+    );
   }, [categoryId, currentPage, limit, sort]);
 
   const handleChange = (event, value) => {

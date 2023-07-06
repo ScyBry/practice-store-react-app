@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../redux/slices/cartSlice';
+import { Box } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
 import axios from '../../axios';
 
 import styles from './style.module.scss';
 import { Button, Rating } from '@mui/material';
+import { Height } from '@mui/icons-material';
 
 export default function FullCard() {
   const dispatch = useDispatch();
@@ -40,7 +43,11 @@ export default function FullCard() {
   };
 
   if (isLoading) {
-    return <>Загружается</>;
+    return (
+      <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <CircularProgress />
+      </Box>
+    );
   }
 
   return (

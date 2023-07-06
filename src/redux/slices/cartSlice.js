@@ -14,7 +14,6 @@ const cartSlice = createSlice({
       if (findItem) {
         findItem.count++;
         findItem.itemPrice = findItem.itemPrice + action.payload.price;
-        console.log(findItem.itemPrice);
       } else {
         state.items.push({
           ...action.payload,
